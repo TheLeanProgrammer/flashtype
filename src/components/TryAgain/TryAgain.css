@@ -1,0 +1,64 @@
+.try-again-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.try-again-container > h1 {
+    text-decoration: underline;
+    margin: 0;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.result-container > p {
+    font-size: 28px;
+    margin: 7px;
+}
+
+.end-buttons {
+    position: relative;
+    margin: 12px;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 16px;
+    min-width: 64px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.start-again-btn {
+    background: #3e4248;
+}
+
+.start-again-btn:hover,
+.start-again-btn:focus {
+    background: #808080;
+}
+
+.share-btn {
+    background: #3b5998;
+}
+
+.share-btn:hover,
+.share-btn:focus {
+    background: #5d7dc4;
+}
+
+.tweet-btn {
+    background: #1da1f2;
+}
+
+.tweet-btn:hover,
+.tweet-btn:focus {
+    background: #8faef3;
+}

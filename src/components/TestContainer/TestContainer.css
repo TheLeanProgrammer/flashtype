@@ -1,0 +1,23 @@
+.test-container {
+    background-color: #ffffff;
+    margin: 64px 0;
+    margin-left: 10%;
+    width: 80%;
+    min-height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.typing-challenge-cont {
+    display: flex;
+    flex-grow: 1;
+}
+
+.try-again-cont {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
