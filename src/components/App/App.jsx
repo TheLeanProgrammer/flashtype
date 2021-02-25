@@ -1,4 +1,5 @@
 import React from "react";
+import { SAMPLE_PARAGRAPHS } from "../../data/sampleParagraphs";
 import ChallengeSection from "../ChallengeSection/ChallengeSection";
 import Footer from "../Footer/Footer";
 import Landing from "../Landing/Landing";
@@ -41,8 +42,30 @@ class App extends React.Component {
     // };
     state = DefaultState;
 
+    fetchNewParagraphFallback = () => {
+        const data =
+            SAMPLE_PARAGRAPHS[
+                Math.floor(Math.random() * SAMPLE_PARAGRAPHS.length)
+            ];
+
+        const selectedParagraphArray = data.split("");
+        const testInfo = selectedParagraphArray.map((selectedLetter) => {
+            return {
+                testLetter: selectedLetter,
+                status: "notAttempted",
+            };
+        });
+
+        // Update the testInfo in state
+        this.setState({
+            ...DefaultState,
+            selectedParagraph: data,
+            testInfo,
+        });
+    };
+
     fetchNewParagraph = () => {
-        fetch("http://metaphorpsum.com/paragraphs/1/8")
+        fetch("http://metaphorpsum.com/paragraphs/1/9")
             .then((response) => response.text())
             .then((data) => {
                 // Once the api results are here, break the selectedParagraph into test info
@@ -67,10 +90,10 @@ class App extends React.Component {
 
     componentDidMount() {
         // As soon as the component mounts, load the selected paragraph from the API
-        this.fetchNewParagraph();
+        this.fetchNewParagraphFallback();
     }
 
-    startAgain = () => this.fetchNewParagraph();
+    startAgain = () => this.fetchNewParagraphFallback();
 
     startTimer = () => {
         this.setState({ timerStarted: true });
