@@ -5,6 +5,7 @@ A simple typing speed test application
 ## Libraries used
 
 https://www.npmjs.com/package/typewriter-effect
+
 https://michalsnik.github.io/aos/
 
 ## Include the fonts and aos in index.html
