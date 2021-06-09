@@ -162,6 +162,15 @@ class App extends React.Component {
             return;
         }
 
+        if (index === this.state.selectedParagraph.length - 1) {
+            this.setState({
+                characters,
+                words,
+                timeRemaining: 0,
+            });
+            return;
+        }
+
         // Make a copy
         const testInfo = this.state.testInfo;
         if (!(index === this.state.selectedParagraph.length - 1))
