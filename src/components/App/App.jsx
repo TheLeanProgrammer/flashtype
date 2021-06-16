@@ -162,6 +162,23 @@ class App extends React.Component {
             return;
         }
 
+        if (index === this.state.selectedParagraph.length - 1) {
+            const timeSpent = TotalTime - this.state.timeRemaining;
+            const wpm =
+                timeSpent > 0
+                    ? (this.state.words * TotalTime) /
+                      (TotalTime - this.state.timeRemaining)
+                    : 0;
+
+            this.setState({
+                characters,
+                words,
+                wpm: parseInt(wpm),
+                timeRemaining: 0,
+            });
+            return;
+        }
+
         // Make a copy
         const testInfo = this.state.testInfo;
         if (!(index === this.state.selectedParagraph.length - 1))

@@ -15,7 +15,7 @@ const TryAgain = ({ words, characters, wpm, startAgain }) => {
                     <b>Words:</b> {words}
                 </p>
                 <p>
-                    <b>Speed</b> {wpm} wpm
+                    <b>Speed:</b> {wpm} wpm
                 </p>
             </div>
 
