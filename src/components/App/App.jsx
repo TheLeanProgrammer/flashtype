@@ -62,6 +62,8 @@ class App extends React.Component {
             selectedParagraph: data,
             testInfo,
         });
+
+        window.scrollTo(0,0);
     };
 
     fetchNewParagraph = () => {
