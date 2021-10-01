@@ -19,7 +19,7 @@ import "./App.css";
  * ]
  */
 
-const TotalTime = 60;
+const TotalTime = 3;
 const DefaultState = {
     selectedParagraph: "Hello World!",
     testInfo: [],
@@ -62,6 +62,8 @@ class App extends React.Component {
             selectedParagraph: data,
             testInfo,
         });
+
+        window.scrollTo(0,0);
     };
 
     fetchNewParagraph = () => {
