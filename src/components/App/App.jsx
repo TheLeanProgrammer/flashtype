@@ -19,7 +19,7 @@ import "./App.css";
  * ]
  */
 
-const TotalTime = 3;
+const TotalTime = 60;
 const DefaultState = {
     selectedParagraph: "Hello World!",
     testInfo: [],
